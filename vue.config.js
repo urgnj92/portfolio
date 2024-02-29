@@ -10,4 +10,7 @@ module.exports = defineConfig({
       }),
     ],
   },
+  publicPath: process.env.NODE_ENV === 'production' ? '/product-frontend/' : '/',
+  outputDir: 'dist'
 });
+
