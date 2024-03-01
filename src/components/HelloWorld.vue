@@ -1,96 +1,95 @@
 
 <!-- HTML -->
 <template>
-    <div class="container">
-      <header id="header">
-        <transition name="fade">
-          <div v-if="show">
-            <h1 class="site-title">TANAKA URA<span>R</span>A PORTFOLIO</h1>
-          </div>
-        </transition>
-        <nav class="menu">
-          <ul>
-            <li @click="scrollToSection('mainvisual')">Top</li>
-            <li @click="scrollToSection('profile')">Profile</li>
-            <li @click="scrollToSection('skills')">Skills</li>
-            <li @click="scrollToSection('works')">Works</li>
-          </ul>
-        </nav>
-      </header>
+  <div class="container">
+    <header id="header">
+      <transition name="fade">
+        <div v-if="show">
+          <h1 class="site-title">TANAKA URA<span>R</span>A</h1>
+        </div>
+      </transition>
+      <nav class="menu">
+        <ul>
+          <li @click="scrollToSection('mainvisual')">Top</li>
+          <li @click="scrollToSection('profile')">Profile</li>
+          <li @click="scrollToSection('skills')">Skills</li>
+          <li @click="scrollToSection('works')">Works</li>
+          <li @click="animateItem">Contact</li>
+        </ul>
+      </nav>
 
-      <main>
-        <div id="mainvisual">
-          <img src="../assets/mainvisual.jpg" alt="mainvisual">
+    </header>
+
+    <main>
+      <div id="mainvisual">
+        <img src="../assets/mainvisual.jpg" alt="mainvisual">
+      </div>
+
+      <div id="sub-title">
+        <p>Thank you for coming to my portfolio</p>
+      </div>
+
+
+      <section id="profile" class="wrapper">
+        <div class="image">
+          <img src="../assets/prof_purple.png" alt="profile_img">
         </div>
 
-        <section id="profile" class="wrapper">
-          <transition name="fade">
-          <div class="image">
-            <img src="../assets/prof_purple.png" alt="profile_img">
-          </div>
-        </transition>
+        <div class="contents">
+          <h2 class="section-title">Profile</h2>
+          <p>
+            1992年生まれ 茨城県出身・在住<br>
+            大学卒業後、接客業、事務職を経験しIT企業に入社。<br>
+            事務職の時にWebサイトのデザイン考案に携わる機会があり、「もっとこの業界のことを知りたい！自分でいろんなもの作ってみたい！」という好奇心からIT企業への転職を決意。<br>
+            現在は研修期間中に学んだ言語を使って、Webサイト制作に励んでいます。Webデザイナー・フロントエンドエンジニアを目指して奮闘中。
+          </p>
+        </div>
+      </section>
 
-          <div class="contents">
-            <h2 class="section-title">Profile</h2>
-            <p>
-              1992年生まれ 茨城県出身・在住<br>
-              大学卒業後、接客業、事務職を経験しIT企業に入社。<br>
-              事務職の時にWebサイトのデザイン考案に携わる機会があり、「もっとこの業界のことを知りたい！自分でいろんなもの作ってみたい！」という好奇心からIT企業への転職を決意。<br>
-              現在は研修期間中に学んだ言語を使って、Webサイト制作に励んでいます。Webデザイナー・フロントエンドエンジニアを目指して奮闘中。
-            </p>
-            <div class="background"></div>
-          </div>
-        </section>
+      <section id="skills" class="wrapper">
+        <div class="image">
+          <img src="../assets/skills_logo.png" alt="skill_icons">
+        </div>
 
-        <section id="skills" class="wrapper">
-          <div class="image">
-            <img src="../assets/skills_logo.png" alt="skill_icons">
-          </div>
+        <div class="contents">
+          <h2 class="section-title">Skills</h2>
+          <p>
+            HTML/CSSを用いた静的サイトの作成、JavaScriptを用いた動的サイトの作成が可能です。<br>
+            PHP Laravel(mySQL)を用いてCRUD機能の実装を行った経験があります。<br>
+            Vue3、Photoshop、Illustlator、Adobe XDについて現在学習中です。
+          </p>
+        </div>
+      </section>
 
-          <div class="contents">
-            <h2 class="section-title">Skills</h2>
-            <p>
-              HTML/CSSを用いた静的サイトの作成、JavaScriptを用いた動的サイトの作成が可能です。<br>
-              PHP Laravel(mySQL)を用いてCRUD機能の実装を行った経験があります。<br>
-              Vue3、Photoshop、Illustlator、Adobe XDについて現在学習中です。
-            </p>
-            <div class="background"></div>
-          </div>
-        </section>
+      <section id="works" class="wrapper">
+        <div class="image">
+          <img src="../assets/works_1.png" alt="works">
+        </div>
+        <div class="contents">
+          <h2 class="section-title">Works</h2>
+          <h3 class="sub_title">Title</h3>
+          <ul>
+            <li><a href="https://urgnj92.github.io/portfolio/">TANAKA URARA PORTFOLIO</a></li>
+          </ul>
+          <h3 class="sub_title">Language</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+          </ul>
+          <h3 class="sub_title">Description</h3>
+          <ul>
+            <li>当ポートフォリオサイト。デザインとフロントの実装後、Github pagesを利用して公開。</li>
+            <li>フレームワークはVue3を使用しています。</li>
+          </ul>
+          <p>-Other works are coming soon</p>
+        </div>
+      </section>
 
-        <section id="works" class="wrapper">
-          <div class="image">
-            <img src="../assets/work_1.png" alt="works">
-          </div>
-          <div class="contents">
-            <h2 class="section-title">Works</h2>
-            <h3 class="sub_title">Language</h3>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-            </ul>
-              <h3 class="sub_title">Description</h3>
-            <ul>
-              <li>当ポートフォリオサイト。デザインとフロントの実装後、Github pagesを利用して公開。</li>
-              <li>フレームワークはVue3を使用しています。</li>
-            </ul>
-          </div>
-          <div class="background"></div>
-        </section>
-          <div class="works_img">
-              <ul>
-                <li @click="animateItem"><img src="../assets/ComingSoon.png" alt="sample"></li>
-                <li @click="animateItem"><img src="../assets/ComingSoon.png" alt="sample"></li>
-                <li @click="animateItem"><img src="../assets/ComingSoon.png" alt="sample"></li>
-                <li @click="animateItem"><img src="../assets/ComingSoon.png" alt="sample"></li>
-              </ul>
-          </div>
-      </main>
-    </div>
+    </main>
 
     <footer id="footer">
       <p>&copy; 2024 Portfolio</p>
     </footer>
-
+  </div>
 </template>
 
 <!-- JS -->
@@ -122,7 +121,7 @@ export default {
     // スクロール時のアニメーション処理
     scrollToSection(sectionId) {
       const sectionElement = document.getElementById(sectionId);
-      if(sectionElement) {
+      if (sectionElement) {
         // ヘッダーの高さを取得
         const headerHeight = document.getElementById('header').offsetHeight;
         // スクロール処理
@@ -130,11 +129,10 @@ export default {
           top: sectionElement.offsetTop - headerHeight,
           behavior: 'smooth',
         });
-        }
       }
     }
   }
-
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -143,6 +141,7 @@ export default {
 .fade-leave-active {
   transition: opacity 7s;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -150,58 +149,53 @@ export default {
 
 html {
   scroll-behavior: smooth;
-  max-width: 1200px;
 }
 
+
 main {
-  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央寄せ */
 }
 
 h2 {
   display: block;
 }
 
+h3 {
+  margin: 5px 0 5px 0;
+}
+
 ul {
-  list-style-type: none;
   padding: 0;
 }
 
 li {
   margin: 0 10px;
+  list-style-type: none;
 }
 
 span {
   color: #AC00BA;
 }
 
-/* #screen {
-  opacity: 1;
-  /* 非表示の初期位置（横からの距離） */
-  /* transform: translateX(-50px);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+a {
+  color: #707070;
 }
-
-#screen img {
-  max-width: 1000px;
-}
-
-.show {
-  transform: translateX(0);
-} */ 
 
 /* header */
 #header {
   height: 120px;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #FFF;
-  /* #F9EFFC */
   padding: 10px;
   z-index: 1000;
   box-shadow: 3px 5px 3px #EAE7E7;
-
 }
 
 #header .menu ul {
@@ -214,17 +208,30 @@ span {
   text-align: center;
 }
 
+
 /* main visual */
 #mainvisual {
-  margin-bottom: 400px;
+  margin-top: 160px;
+  margin-bottom: 10px;
 }
 
 #mainvisual img {
-  width: 100%;
+  width: 1200px;
   height: 550px;
   object-fit: cover;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
+
+#sub-title {
+  width: 100%;
+}
+
+#sub-title p {
+  text-align: center;
+  color: #fff;
+  background-color: #CC83D1
+}
+
 
 #works .image {
   padding-top: 30px;
@@ -234,12 +241,16 @@ span {
   border: 2px solid #CC83D1;
 }
 
+#works .contents p {
+  text-align: right;
+  padding-top: 10px;
+}
 
 /* footer */
 #footer {
-  /* background-color: #F9EFFC; */
   color: #707070;
   text-align: center;
+  /* width: 100%; */
 }
 
 .menu li {
@@ -251,18 +262,26 @@ span {
   transform: translateY(-5px);
 }
 
+
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
 .wrapper {
-  /* width: 1000px; */
-  margin-top: 400px;
-  /* margin-bottom: 50px; */
-  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: space-between;
+}
+
+.wrapper .image img {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px;
 }
 
 .contents {
@@ -273,34 +292,96 @@ span {
   width: 700px;
 }
 
-.wrapper .image img {
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  padding: 30px;
-}
-
 .section-title {
   color: #707070;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   border-bottom: dotted #AC00BA;
 }
 
-.works_img {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0 150px 0;
-}
-.works_img ul {
-  display: flex;
-}
-.works_img li:hover {
-  transform: translateY(-5px);
-}
-.works_img li img {
-  border: 2px solid #CC83D1;
-  box-shadow: 3px 5px 3px #EAE7E7;
-  margin: 10px;
+
+
+/* sp */
+@media screen and (max-width: 767px) {
+  main {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 10px;
+  }
+
+  /* Header */
+  #header {
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  #header ul {
+    justify-content: flex-start;
+  }
+
+  #header li {
+    font-size: 0.8rem;
+  }
+
+  #header .menu li {
+    border-bottom: none;
+  }
+
+  #mainvisual {
+    margin-top: 70px;
+
+  }
+
+  #mainvisual img {
+    width: 100%;
+    height: 250px;
+  }
+
+  #sub-title p {
+  margin-top: 0;
 }
 
+
+  #works ul {
+    flex-direction: column;
+  }
+
+  #works li {
+    width: 100%;
+  }
+
+  .menu {
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    margin-bottom: 35px;
+    flex-direction: column;
+  }
+
+  .wrapper .image img {
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+  }
+
+  .wrapper .contents {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+
+  .site-title {
+    margin-top: 20px;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+}
 </style>
