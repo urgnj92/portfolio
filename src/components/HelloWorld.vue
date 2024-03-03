@@ -14,7 +14,7 @@
           <li @click="scrollToSection('profile')">Profile</li>
           <li @click="scrollToSection('skills')">Skills</li>
           <li @click="scrollToSection('works')">Works</li>
-          <li @click="animateItem">Contact</li>
+          <li @click="animateItem"><a href="https://twitter.com/_tnur">X</a></li>
         </ul>
       </nav>
 
@@ -56,7 +56,7 @@
           <p>
             HTML/CSSを用いた静的サイトの作成、JavaScriptを用いた動的サイトの作成が可能です。<br>
             PHP Laravel(mySQL)を用いてCRUD機能の実装を行った経験があります。<br>
-            Vue3、Photoshop、Illustlator、Adobe XDについて現在学習中です。
+            Vue3、Photoshop、Illustrator、Adobe XDについて現在学習中です。
           </p>
         </div>
       </section>
@@ -183,6 +183,7 @@ span {
 
 a {
   color: #707070;
+  text-decoration: none;
 }
 
 /* header */
